@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Task 1</title>
+</head>
+
+<body>
+    <h1>JavaScript Calculator</h1>
+    <form name="task1">
+        <b>a:</b> <input type="text" name="n1">
+        <br>
+        <b>b:</b> <input type="text" name="n2">
+        <br>
+        <br>
+        <b>Sum:</b> <input type="text" name="s"><br>
+        <b>Subtraction:</b> <input type="text" name="sub"><br>
+        <b>Prooduct:</b> <input type="text" name="multiply"><br>
+        <b>Division</b> <input type="text" name="division"><br>
+
+        <input type="button" value="calculate" onclick="sumValues()">
+    </form>
+    <script type="text/javascript">
+        function sumValues() {
+            var a, b, sum;
+            a = Number(document.task1.n1.value);
+            b = Number(document.task1.n2.value);
+            sum = a + b;
+            document.task1.s.value = sum;
+
+            sub = a - b;
+            document.task1.sub.value = sub;
+
+            mul = a * b;
+            document.task1.multiply.value = mul;
+
+            div = a / b;
+            document.task1.division.value = div;
+
+        }
+    </script>
+</body>
+
+</html>

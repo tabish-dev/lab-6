@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Task 3</title>
+</head>
+
+<body>
+    <form name="task3">
+        <b>a:</b> <input type="text" name="n1">
+        <br>
+        <b>b:</b> <input type="text" name="n2">
+        <br>
+        <b>c:</b> <input type="text" name="n3">
+        <br>
+        <b>d:</b> <input type="text" name="n4">
+        <br>
+        <br>
+        <b>Min:</b> <input type="text" name="min"><br>
+        <b>Max:</b> <input type="text" name="max"><br>
+        <b>Random:</b> <input type="text" name="random"><br>
+
+
+        <input type="button" value="find" onclick="sumValues()">
+    </form>
+    <script type="text/javascript">
+        function sumValues() {
+            var a, b, c, d, minimum, maximum, rand;
+            a = Number(document.task3.n1.value);
+            b = Number(document.task3.n2.value);
+            c = Number(document.task3.n3.value);
+            d = Number(document.task3.n4.value);
+            minimum = Math.min(a, b, c, d);
+            document.task3.min.value = minimum;
+
+            maximum = Math.max(a, b, c, d);
+            document.task3.max.value = maximum;
+
+            rand = Math.floor(Math.random() * (maximum - minimum + 1) + minimum);
+            document.task3.random.value = rand;
+
+        }
+    </script>
+</body>
+
+</html>
